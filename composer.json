@@ -1,7 +1,6 @@
 {
     "name": "iamdaniyal-ir/management",
     "description": "This package will manage CRUD actions",
-    "license": "GPLv3",
     "authors": [
         {
             "name": "Daniyal Sedighpour",
@@ -9,5 +8,5 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": { }
 }
