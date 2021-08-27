@@ -1,11 +1,19 @@
 {
     "name": "daniyal2959/management",
     "description": "This package will manage CRUD actions",
+    "type": "project",
+    "license": "MIT",
     "authors": [
         {
             "name": "Daniyal Sedighpour",
             "email": "44816659+daniyal2959@users.noreply.github.com"
         }
     ],
-    "require": { }
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "IAMdaniyal\\Management\\": "src/"
+        }
+    },
+    "require": {}
 }
