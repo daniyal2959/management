@@ -9,7 +9,7 @@
             "email": "44816659+daniyal2959@users.noreply.github.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "IAMdaniyal\\Management\\": "src/"
