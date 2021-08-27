@@ -1,7 +1,7 @@
 {
     "name": "daniyal2959/management",
     "description": "This package will manage CRUD actions",
-    "type": "project",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
