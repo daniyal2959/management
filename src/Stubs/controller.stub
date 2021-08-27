@@ -1,0 +1,93 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\{{model_name}};
+use Illuminate\Http\Request;
+
+class {{class}}Controller extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        ${{plural_name}} = {{model_name}}::all();
+        return view('{{plural_name}}.index', compact('{{plural_name}}'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('{{plural_name}}.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            {{validation_data}}
+        ], [
+            // Rules Message
+        ]);
+        ${{name}} = new {{model_name}}();
+        // ---------- {{model_name}} Migration Fields ----------
+        {{fields_data}}
+        // ----------                       ----------
+        ${{name}}->save();
+        setAlert('created', '{{name}} successfully created', 'success');
+        return back();
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show($signature)
+    {
+        ${{name}} = {{model_name}}::where('signature', $signature)->firstOrFail();
+        return view('{{plural_name}}.show', compact('{{name}}'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit($signature)
+    {
+        ${{name}} = {{model_name}}::where('signature', $signature)->firstOrFail();
+        return view('{{plural_name}}.update', compact('{{name}}'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, $signature)
+    {
+        $request->validate([
+            {{validation_data}}
+        ], [
+            // Rules Message
+        ]);
+        ${{name}} = {{model_name}}::where('signature', $signature)->firstOrFail();
+        // ---------- {{model_name}} Migration Fields ----------
+        {{fields_data}}
+        // ----------                       ----------
+        ${{name}}->save();
+        setAlert('updated', '{{name}} successfully updated', 'success');
+        return back();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy($signature)
+    {
+        ${{name}} = {{model_name}}::where('signature', $signature)->firstOrFail();
+        ${{name}}->delete();
+        setAlert('deleted', '{{name}} successfully deleted', 'success');
+        return back();
+    }
+}
