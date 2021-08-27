@@ -8,15 +8,15 @@ This package create model, migration, controller, factory, seeder and routes wit
 The package purpose is avoid wasting time.
 
 ----
-##1: Setup
+## 1: Setup
 
 `composer require daniyal2959/management`
 
-##2: Launch
+## 2: Launch
 
 The main command is `php artisan crud:create`. if you want to set migration structure use `--scheme` option as below:
 
-###Options
+### Options
 
 * **--scheme**= (optional) : this option create migration structure. this structure is:
 
