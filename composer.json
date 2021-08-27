@@ -15,5 +15,12 @@
             "IAMdaniyal\\Management\\": "src/"
         }
     },
-    "require": {}
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IAMdaniyal\\Management\\src\\Provider\\ManagementServiceProvider"
+            ]
+        }
+    }
 }

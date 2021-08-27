@@ -48,28 +48,6 @@ class ManagementCommand extends Command
         $seed = $this->option('seed');
         $parser = new Parser($name, $scheme, $seed);
         $parser->parse();
-//        $migrationCommand = 'crud:migration '.$name;
-//        if(!is_null($scheme))
-//            $migrationCommand .= ' --scheme='.$scheme;
-//
-//        // Generate CRUD actions
-//        Artisan::call('crud:model '.$name);
-//        Artisan::call('crud:controller '.$name);
-//        Artisan::call($migrationCommand);
-//        Artisan::call('crud:route '.$name);
-//
-//        // Generate Seeder & Factory if --seed Option included
-//        $seedCount = $this->option('seed');
-//        if($seedCount){
-//            Artisan::call('crud:factory '.$name);
-//            Artisan::call('crud:seeder '.$name. ' --count='.$seedCount);
-//        }
-//
-//        if($this->confirm('Do you wish to migrate tables?')){
-//            $migrateCommand = 'migrate:refresh';
-//            $seedCount > 0 ? $migrateCommand .= ' --seed' : null;
-//            Artisan::call($migrateCommand);
-//        }
         return false;
     }
 }
